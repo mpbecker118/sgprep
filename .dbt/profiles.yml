@@ -1,0 +1,13 @@
+my-redshift-db:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: examplecluster.c0mohfsoq8zb.us-east-2.redshift.amazonaws.com:5439
+      user: awsuser
+      pass: Levi1234
+      port: 5439
+      dbname: dev
+      schema: [dbt schema]
+      threads: [between 1 and 8]
+      keepalives_idle: 0 # default 0, indicating the system default
